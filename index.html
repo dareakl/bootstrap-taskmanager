@@ -68,6 +68,7 @@
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title">Add Task</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                         </div>
                         <div class=""modal-body">
                         <form action="">
@@ -98,6 +99,33 @@
                 </div>
 
              </div>
+        </div>
+        <!--Dropdown:Useful for providing links lists of actions or filters-->
+        <div class="dropdown mt-3">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">Actions</button>
+            <ul class="dropdown-menu">
+                <li ><a class="dropdown-item" href="#">Edit Task</a></li>
+                <li><a class="dropdown-item" href="#">Delete Task</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Mark as Completed</a></li>
+            </ul>
+        </div>
+        <!--Navs & Tabs-->
+        <ul class="nav nav-tabs mt-3">
+            <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#allTasks" type="button">All Tasks</button></li>
+             <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#completedTasks" type="button">Completed Tasks</button></li>
+              <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#pendingTasks" type="button">Pending Tasks</button></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane show fade active" id="allTasks">
+                <p>All the tasks will be displayed here</p>
+            </div>
+            <div class="tab-pane fade" id="completedTasks">
+                <p>Competed tasks will be displayed here</p>
+            </div>
+            <div class="tab-pane fade" id="pendingTasks">
+                <p>Pending tasks will be displayed here</p>
+            </div>
         </div>
         </div>
     </main>
