@@ -48,7 +48,57 @@
 
     <main>
         <div class="container">
-        <button class="btn btn-primary" type=""button">Add task</button>
+        <button class="btn btn-primary" type=""button" data-bs-toggle="modal" data-bs-target="#addTaskModal">Add Task</button>
+        <!--Card:Used for displaying content in structured format-->
+        <div class="card mt-3">
+            <div class="card-header">
+                Task List
+            </div>
+            <div class="card-body">
+                <!--List Group: used for displaying list-->
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item active d-flex justify-content-between align-items-center">Task 1 <span class="badge bg-success rounded-pill">New</span></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center"">Task 2 <span class="badge bg-warning rounded-pill">In Progress</span></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center"">Task 3 <span class="badge bg-danger rounded-pill">canceled</span></li>
+            </ul>
+            </div>
+            <!-- Modal: displaying alerts-->
+             <div class="modal fade" id="addTaskModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Add Task</h5>
+                        </div>
+                        <div class=""modal-body">
+                        <form action="">
+                            <div class="mb-3">
+                                <label for="taskName" class="form-lable">Task Name</label>
+                                <input class="form-control" id="taskName" type="text" placeholder="Enter Task Name"></input>
+                            </div>
+                            <div class="mb-3">
+                                <label for="taskDescription" class="form-lable">Task Description</label>
+                                <textarea class="form-control" id="taskDescription" type="text" placeholder="Enter Task Description"></textarea>
+                            </div>
+                             <div class="mb-3">
+                                <label for="taskStatus">Task Status</label>
+                                <select class="form-select" name="" id="taskStatus">
+                                    <option selected>new</option>
+                                    <option >In Progress</option>
+                                    <option >Completed</option>
+                                    <option >Canceled</option>
+                                </select>
+                            </div>
+                        </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Save Task</button>
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+
+             </div>
+        </div>
         </div>
     </main>
     <script
